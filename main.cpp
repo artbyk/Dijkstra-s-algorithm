@@ -43,5 +43,13 @@ int main() {
 		}
 	}
     
+    int t;
+    cin>>t; // Восстановить путь до любой вершины t 
+    vector<int> path;
+    for (int v=t; v!=s; v=p[v])
+        path.push_back (v);
+    path.push_back (s);
+    reverse (path.begin(), path.end());
+    
 }
     
